@@ -1,12 +1,14 @@
 # greps_test
 
 The following oneliner extracts varibles from bash code:
+```bash
 grep -Po '\\*?\$.*?[" }\n]' | grep -v '^\\[^\]' | sed -e 's|\\||'
-
-##Usage:
+```
+Usage:
+```bash
 cat vars.test | grep -Po '\\*?\$.*?[" }\n]' | grep -v '^\\[^\]' | sed -e 's|\\||'  
-
-##Expected output:
+```
+Expected output:
 ```bash
 $plain_var 
 $concatenated$vars 
@@ -19,7 +21,7 @@ ${CHANNEL:-common}
 ${1}
 \${two_slashes_to_one}
 ```
-##Explanation:
+Explanation:
 
 1. 
 ```bash
