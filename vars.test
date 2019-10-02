@@ -1,0 +1,17 @@
+#tests
+
+$plain_var  plain vars
+
+$concatenated$vars  concatenated vars
+
+${expanded_var} expanded vars
+
+multiline ${multiline_var4} expanded vars $multiline_var5 with arrays ["${arr1e}","\\${arr2e}"]
+
+Conditional vars: ${CHANNEL:-common} 
+
+Args: ${1}
+
+\${VAR} should be rejected
+
+\\${two_slashes_to_one} replace escaped backslash with simple backslash
